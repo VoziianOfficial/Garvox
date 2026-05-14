@@ -3014,3 +3014,242 @@ body.menu-open {
         transform: none;
     }
 }
+
+/* ==========================================================
+   EDITORIAL SIX GRID — PREMIUM CARD HOVERS
+   ========================================================== */
+
+.editorial-grid--six .editorial-item {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    cursor: default;
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.editorial-grid--six .editorial-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 18px;
+    left: 18px;
+    z-index: -1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0;
+    transform: scaleX(0.28);
+    transform-origin: center;
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base);
+}
+
+.editorial-grid--six .editorial-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        radial-gradient(circle at top right, rgba(255, 31, 45, 0.08), transparent 42%),
+        rgba(255, 255, 255, 0.12);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.editorial-grid--six .editorial-item span {
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base),
+        text-shadow var(--transition-base);
+}
+
+.editorial-grid--six .editorial-item h3 {
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.editorial-grid--six .editorial-item p {
+    transition: color var(--transition-base);
+}
+
+.editorial-grid--six .editorial-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 31, 45, 0.34);
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow:
+        0 22px 44px rgba(31, 34, 37, 0.14),
+        0 0 24px rgba(255, 31, 45, 0.06);
+}
+
+.editorial-grid--six .editorial-item:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.editorial-grid--six .editorial-item:hover::after {
+    opacity: 1;
+}
+
+.editorial-grid--six .editorial-item:hover span {
+    color: var(--color-accent-deep);
+    transform: translateY(-2px);
+    text-shadow: 0 0 18px rgba(255, 31, 45, 0.18);
+}
+
+.editorial-grid--six .editorial-item:hover h3 {
+    color: var(--color-light-heading);
+    transform: translateY(-1px);
+}
+
+.editorial-grid--six .editorial-item:hover p {
+    color: var(--color-light-text);
+}
+
+/* Small red corner detail */
+
+.editorial-grid--six .editorial-item span::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 2px;
+    margin-top: 10px;
+    background: var(--color-accent-deep);
+    opacity: 0;
+    transform: scaleX(0.35);
+    transform-origin: left;
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base);
+}
+
+.editorial-grid--six .editorial-item:hover span::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* Mobile/touch: no aggressive movement */
+
+@media (hover: none) {
+    .editorial-grid--six .editorial-item:hover {
+        transform: none;
+    }
+}
+
+/* ==========================================================
+   EDITORIAL SIX GRID — COMPACT CARDS + NUMBER TOP RIGHT
+   ========================================================== */
+
+.editorial-grid--six .editorial-item {
+    position: relative;
+    min-height: 150px;
+    padding: 22px 72px 22px 22px;
+    display: grid;
+    align-content: start;
+    gap: 8px;
+}
+
+/* Number in top-right corner */
+.editorial-grid--six .editorial-item>span {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    margin: 0;
+    color: var(--color-accent-deep);
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1;
+    background: rgba(255, 31, 45, 0.08);
+    border: 1px solid rgba(169, 15, 25, 0.22);
+    border-radius: 999px;
+}
+
+/* Disable old number underline if it exists */
+.editorial-grid--six .editorial-item>span::after {
+    display: none;
+}
+
+.editorial-grid--six .editorial-item h3 {
+    margin: 0;
+    max-width: 220px;
+    font-size: 1.02rem;
+    line-height: 1.12;
+}
+
+.editorial-grid--six .editorial-item p {
+    margin-top: 4px;
+    font-size: 0.88rem;
+    line-height: 1.42;
+}
+
+/* Hover with number in corner */
+.editorial-grid--six .editorial-item:hover>span {
+    color: #ffffff;
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 22px rgba(255, 31, 45, 0.24);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .editorial-grid--six .editorial-item {
+        min-height: 138px;
+        padding: 20px 66px 20px 20px;
+    }
+
+    .editorial-grid--six .editorial-item>span {
+        top: 15px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    .editorial-grid--six .editorial-item {
+        min-height: 126px;
+        padding: 18px 60px 18px 18px;
+        gap: 7px;
+    }
+
+    .editorial-grid--six .editorial-item>span {
+        top: 14px;
+        right: 14px;
+        width: 34px;
+        height: 34px;
+        font-size: 0.78rem;
+    }
+
+    .editorial-grid--six .editorial-item h3 {
+        font-size: 1rem;
+    }
+
+    .editorial-grid--six .editorial-item p {
+        font-size: 0.86rem;
+        line-height: 1.4;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 430px) {
+    .editorial-grid--six .editorial-item {
+        min-height: 118px;
+        padding: 16px 56px 16px 16px;
+    }
+
+    .editorial-grid--six .editorial-item>span {
+        width: 32px;
+        height: 32px;
+    }
+}
