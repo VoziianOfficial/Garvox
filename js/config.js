@@ -56,8 +56,8 @@ window.SITE_CONFIG = {
             about: "./assets/images/hero-about.jpg",
             contact: "./assets/images/hero-contact.jpg",
             installation: "./assets/images/hero-installation.jpg",
-            replacement: "./assets/images/hero-replacement.jpg",
-            repair: "./assets/images/hero-repair.jpg",
+            replacement: "./assets/images/service-replacement.jpg",
+            repair: "./assets/images/home-hero-03.jpg",
             openers: "./assets/images/hero-openers.jpg",
             legal: "./assets/images/cta-garage-door.jpg"
         },
@@ -67,8 +67,8 @@ window.SITE_CONFIG = {
             cta: "./assets/images/cta-garage-door.jpg",
             modernGarageDoor: "./assets/images/material-glass.jpg",
             traditionalGarageDoor: "./assets/images/traditional-garage-door.jpg",
-            beforeDoor: "./assets/images/before-door.jpg",
-            afterDoor: "./assets/images/after-door.jpg",
+            beforeDoor: "./assets/images/traditional-garage-door.jpg",
+            afterDoor: "./assets/images/service-replacement.jpg",
 
             services: {
                 installation: "./assets/images/service-installation.jpg",
@@ -85,12 +85,12 @@ window.SITE_CONFIG = {
             },
 
             styles: {
-                flushPanel: "./assets/images/style-flush-panel.jpg",
-                raisedPanel: "./assets/images/style-raised-panel.jpg",
-                carriageHouse: "./assets/images/style-carriage-house.jpg",
-                modernGlass: "./assets/images/style-modern-glass.jpg",
-                woodLook: "./assets/images/style-wood-look.jpg",
-                insulatedSteel: "./assets/images/style-insulated-steel.jpg"
+                flushPanel: "./assets/images/service-installation.jpg",
+                raisedPanel: "./assets/images/traditional-garage-door.jpg",
+                carriageHouse: "./assets/images/tab-carriage.jpg",
+                modernGlass: "./assets/images/material-glass.jpg",
+                woodLook: "./assets/images/material-wood.jpg",
+                insulatedSteel: "./assets/images/material-steel.jpg"
             },
 
             tabs: {
@@ -214,7 +214,7 @@ window.SITE_CONFIG = {
             href: "garage-door-repair.html",
             icon: "wrench",
             image: "./assets/images/service-repair.jpg",
-            heroImage: "./assets/images/hero-repair.jpg",
+            heroImage: "./assets/images/home-hero-03.jpg",
             summary:
                 "Compare independent provider options for repair-related requests such as stuck doors, noisy operation, damaged panels, springs, tracks, rollers, and openers.",
             cardText:
@@ -456,32 +456,32 @@ window.SITE_CONFIG = {
             {
                 title: "Flush Panel",
                 text: "A clean modern look often used for simple, minimal garage designs.",
-                image: "./assets/images/style-flush-panel.jpg"
+                image: "./assets/images/service-installation.jpg"
             },
             {
                 title: "Raised Panel",
                 text: "A classic residential style with familiar panel depth and structure.",
-                image: "./assets/images/style-raised-panel.jpg"
+                image: "./assets/images/traditional-garage-door.jpg"
             },
             {
                 title: "Carriage House",
                 text: "Traditional visual character with swing-door inspired details.",
-                image: "./assets/images/style-carriage-house.jpg"
+                image: "./assets/images/tab-carriage.jpg"
             },
             {
                 title: "Modern Glass",
                 text: "A sharper contemporary look with glass and aluminum styling.",
-                image: "./assets/images/style-modern-glass.jpg"
+                image: "./assets/images/material-glass.jpg"
             },
             {
                 title: "Wood-Look",
                 text: "Warm visual texture with modern material options to compare.",
-                image: "./assets/images/style-wood-look.jpg"
+                image: "./assets/images/material-wood.jpg"
             },
             {
                 title: "Insulated Steel",
                 text: "A durable option where insulation and strength are comparison points.",
-                image: "./assets/images/style-insulated-steel.jpg"
+                image: "./assets/images/material-steel.jpg"
             }
         ],
 
