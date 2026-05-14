@@ -505,19 +505,24 @@ p {
 .brand-logo__mark {
     position: relative;
     display: grid;
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
     place-items: center;
+    flex: 0 0 auto;
 }
 
 .brand-logo__mark img {
-    width: 42px;
-    height: 42px;
+    display: block;
+    width: 46px;
+    height: 46px;
     object-fit: contain;
-    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.38));
+    object-position: center;
+    filter:
+        drop-shadow(0 10px 18px rgba(0, 0, 0, 0.38))
+        drop-shadow(0 0 12px rgba(255, 31, 45, 0.12));
     transition:
-        filter var(--transition-base),
-        transform var(--transition-base);
+        transform 240ms ease,
+        filter 240ms ease;
 }
 
 .brand-logo__mark::after {
@@ -533,9 +538,10 @@ p {
 }
 
 .brand-logo:hover .brand-logo__mark img {
-    transform: rotate(-8deg);
+    transform: translateY(-1px) scale(1.04);
     filter:
-        drop-shadow(0 12px 18px rgba(0, 0, 0, 0.38)) drop-shadow(0 0 18px rgba(255, 31, 45, 0.34));
+        drop-shadow(0 12px 22px rgba(0, 0, 0, 0.46))
+        drop-shadow(0 0 18px rgba(255, 31, 45, 0.22));
 }
 
 .brand-logo:hover .brand-logo__mark::after {
@@ -2136,8 +2142,8 @@ p {
 
     .brand-logo__mark,
     .brand-logo__mark img {
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
     }
 
     .site-header__actions {
@@ -2233,6 +2239,12 @@ p {
 
     .brand-logo__text {
         letter-spacing: 0.05em;
+    }
+
+    .brand-logo__mark,
+    .brand-logo__mark img {
+        width: 36px;
+        height: 36px;
     }
 
     .page-hero__mini-panel {

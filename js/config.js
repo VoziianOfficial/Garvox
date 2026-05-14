@@ -42,8 +42,8 @@ window.SITE_CONFIG = {
         "GARVOX is an independent provider-matching platform. GARVOX does not perform garage door installation, replacement, repair, opener, or related garage door services directly. Provider availability, pricing, licenses, insurance, warranties, response windows, and project details must be verified directly with the provider before hiring.",
 
     assets: {
-        faviconSvg: "./assets/icons/favicon.svg",
-        logoBearing: "./assets/icons/logo-bearing.svg",
+        faviconSvg: "./assets/icons/garvox-garage.svg",
+        logoBearing: "./assets/icons/garvox-garage.svg",
 
         hero: {
             homeSlides: [
