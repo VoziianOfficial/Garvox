@@ -1,0 +1,99 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>GARVOX bearing logo mark</title>
+
+  <defs>
+    <linearGradient id="bearingOuter" x1="18" y1="12" x2="80" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D8D8D5"/>
+      <stop offset="0.28" stop-color="#6C6F73"/>
+      <stop offset="0.58" stop-color="#303336"/>
+      <stop offset="1" stop-color="#0F1113"/>
+    </linearGradient>
+
+    <linearGradient id="bearingInner" x1="32" y1="24" x2="66" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C9CAC7"/>
+      <stop offset="0.42" stop-color="#464A4E"/>
+      <stop offset="1" stop-color="#17191B"/>
+    </linearGradient>
+
+    <linearGradient id="bearingCut" x1="36" y1="34" x2="60" y2="62" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#25282B"/>
+      <stop offset="1" stop-color="#0F1113"/>
+    </linearGradient>
+
+    <filter id="ruggedShadow" x="0" y="0" width="96" height="96" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="10" stdDeviation="7" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#ruggedShadow)">
+    <path
+      d="M48 7.5C54.15 7.5 59.98 8.87 65.21 11.32L60.01 18.72C56.37 17.19 52.36 16.34 48.15 16.34H47.85C43.64 16.34 39.63 17.19 35.99 18.72L30.79 11.32C36.02 8.87 41.85 7.5 48 7.5Z"
+      fill="url(#bearingOuter)"/>
+
+    <path
+      d="M84.68 30.79L77.28 35.99C78.81 39.63 79.66 43.64 79.66 47.85V48.15C79.66 52.36 78.81 56.37 77.28 60.01L84.68 65.21C87.13 59.98 88.5 54.15 88.5 48C88.5 41.85 87.13 36.02 84.68 30.79Z"
+      fill="url(#bearingOuter)"/>
+
+    <path
+      d="M65.21 84.68L60.01 77.28C56.37 78.81 52.36 79.66 48.15 79.66H47.85C43.64 79.66 39.63 78.81 35.99 77.28L30.79 84.68C36.02 87.13 41.85 88.5 48 88.5C54.15 88.5 59.98 87.13 65.21 84.68Z"
+      fill="url(#bearingOuter)"/>
+
+    <path
+      d="M11.32 65.21L18.72 60.01C17.19 56.37 16.34 52.36 16.34 48.15V47.85C16.34 43.64 17.19 39.63 18.72 35.99L11.32 30.79C8.87 36.02 7.5 41.85 7.5 48C7.5 54.15 8.87 59.98 11.32 65.21Z"
+      fill="url(#bearingOuter)"/>
+
+    <circle cx="48" cy="48" r="31.5" fill="#17191B"/>
+    <circle cx="48" cy="48" r="31.5" stroke="url(#bearingOuter)" stroke-width="8"/>
+
+    <circle cx="48" cy="48" r="20.8" fill="url(#bearingInner)"/>
+    <circle cx="48" cy="48" r="13.2" fill="url(#bearingCut)"/>
+    <circle cx="48" cy="48" r="6.2" fill="#D8D8D5"/>
+
+    <path
+      d="M25.2 34.2C28.45 27.98 34.22 23.43 41.05 21.9"
+      stroke="#F4F4F0"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      opacity="0.72"/>
+
+    <path
+      d="M70.8 61.8C67.55 68.02 61.78 72.57 54.95 74.1"
+      stroke="#0F1113"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      opacity="0.7"/>
+
+    <path
+      d="M69.9 22.8L78.4 17.2"
+      stroke="#FF1F2D"
+      stroke-width="5"
+      stroke-linecap="round"
+      class="logo-bearing-accent"/>
+
+    <path
+      d="M26.1 73.2L17.6 78.8"
+      stroke="#FF1F2D"
+      stroke-width="5"
+      stroke-linecap="round"
+      class="logo-bearing-accent"/>
+
+    <path
+      d="M38.8 16.9L35.1 8.6"
+      stroke="#A9AAA6"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.58"/>
+
+    <path
+      d="M57.2 79.1L60.9 87.4"
+      stroke="#A9AAA6"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.42"/>
+
+    <circle cx="28.2" cy="48" r="3.2" fill="#C9CAC7"/>
+    <circle cx="67.8" cy="48" r="3.2" fill="#303336"/>
+    <circle cx="48" cy="28.2" r="3.2" fill="#C9CAC7"/>
+    <circle cx="48" cy="67.8" r="3.2" fill="#303336"/>
+  </g>
+</svg>

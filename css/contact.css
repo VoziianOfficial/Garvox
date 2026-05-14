@@ -1,0 +1,308 @@
+/* ==========================================================
+   GARVOX — Contact Page Styles
+   Sections:
+   - Contact hero uses global .page-hero
+   - Contact confidence
+   - What happens next light section
+   - Compact contact form
+   - Service urgency strip
+   - Aggregator-safe trust block
+   ========================================================== */
+
+/* ==========================================================
+   CONTACT CONFIDENCE
+   ========================================================== */
+
+.contact-confidence-section {
+    background:
+        radial-gradient(circle at 82% 22%, rgba(255, 31, 45, 0.08), transparent 28rem),
+        var(--color-bg);
+}
+
+.confidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.confidence-card {
+    position: relative;
+    min-height: 250px;
+    padding: 22px;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base);
+}
+
+.confidence-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 22px;
+    left: 22px;
+    height: 1px;
+    background: var(--color-accent);
+    opacity: 0.7;
+    transform: scaleX(0.35);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.confidence-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-border-strong);
+    background:
+        linear-gradient(135deg, rgba(255, 31, 45, 0.09), rgba(255, 255, 255, 0.035));
+}
+
+.confidence-card:hover::before {
+    transform: scaleX(1);
+}
+
+.confidence-card span {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 42px;
+    place-items: center;
+    color: var(--color-accent);
+    font-family: var(--font-display);
+    font-weight: 900;
+    background: rgba(255, 31, 45, 0.08);
+    border: 1px solid rgba(255, 31, 45, 0.22);
+    border-radius: var(--radius-sm);
+}
+
+.confidence-card h3 {
+    font-size: 1.18rem;
+}
+
+.confidence-card p {
+    margin-top: 10px;
+    color: var(--color-muted);
+    font-size: 0.93rem;
+}
+
+/* ==========================================================
+   WHAT HAPPENS NEXT
+   ========================================================== */
+
+.contact-next-section {
+    overflow: hidden;
+}
+
+.contact-next-section::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: min(460px, 54vw);
+    height: min(460px, 54vw);
+    background: linear-gradient(135deg, rgba(169, 15, 25, 0.1), transparent 64%);
+    pointer-events: none;
+}
+
+/* ==========================================================
+   CONTACT FORM SECTION
+   ========================================================== */
+
+.contact-form-section {
+    background:
+        radial-gradient(circle at 12% 24%, rgba(255, 31, 45, 0.09), transparent 28rem),
+        var(--color-bg-deep);
+}
+
+.contact-form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(360px, 0.56fr);
+    align-items: center;
+    gap: clamp(28px, 6vw, 86px);
+}
+
+.contact-form-layout__content {
+    display: grid;
+    gap: 18px;
+    max-width: 720px;
+}
+
+.contact-form-layout__content p {
+    color: var(--color-muted);
+}
+
+.contact-direct-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.contact-direct-list a {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: center;
+    gap: 12px;
+    min-height: 76px;
+    padding: 14px;
+    color: var(--color-heading);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base);
+}
+
+.contact-direct-list a:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-border-strong);
+    background: rgba(255, 255, 255, 0.065);
+}
+
+.contact-direct-list span {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    color: var(--color-accent);
+    background: rgba(255, 31, 45, 0.08);
+    border: 1px solid rgba(255, 31, 45, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+.contact-direct-list svg {
+    width: 21px;
+    height: 21px;
+}
+
+.contact-direct-list strong {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 0.95rem;
+    line-height: 1.25;
+}
+
+.contact-form-layout [data-form="contact"] {
+    display: grid;
+    justify-items: end;
+}
+
+/* ==========================================================
+   CONTACT URGENCY
+   ========================================================== */
+
+.contact-urgency-section {
+    padding-top: clamp(42px, 6vw, 78px);
+    padding-bottom: clamp(42px, 6vw, 78px);
+    background: var(--color-bg);
+}
+
+/* ==========================================================
+   TRUST BLOCK
+   ========================================================== */
+
+.trust-block-section {
+    background:
+        radial-gradient(circle at 84% 26%, rgba(255, 31, 45, 0.08), transparent 28rem),
+        var(--color-bg-deep);
+}
+
+.contact-page .trust-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page .trust-block::after {
+    content: "";
+    position: absolute;
+    right: -120px;
+    bottom: -120px;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   NO MAP SAFETY
+   ========================================================== */
+
+.contact-page iframe[src*="maps"],
+.contact-page [data-map],
+.contact-page .map,
+.contact-page .map-section,
+.contact-page .contact-map,
+.contact-page .location-map {
+    display: none !important;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1100px) {
+    .contact-form-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-layout [data-form="contact"] {
+        justify-items: start;
+    }
+}
+
+@media (max-width: 980px) {
+    .confidence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confidence-card {
+        min-height: auto;
+    }
+
+    .confidence-card span {
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 720px) {
+    .contact-direct-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-direct-list a {
+        min-height: 68px;
+    }
+
+    .contact-form-layout {
+        gap: 28px;
+    }
+
+    .contact-form-layout [data-form="contact"],
+    .contact-form-card {
+        width: 100%;
+    }
+
+    .confidence-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 430px) {
+    .contact-direct-list a {
+        grid-template-columns: 40px 1fr;
+        padding: 12px;
+    }
+
+    .contact-direct-list span {
+        width: 40px;
+        height: 40px;
+    }
+}

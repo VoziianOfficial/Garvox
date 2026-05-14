@@ -1,0 +1,51 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>GARVOX favicon</title>
+
+  <rect width="64" height="64" rx="10" fill="#17191B"/>
+
+  <path
+    d="M32 6.5C36.17 6.5 40.09 7.5 43.56 9.27L39.98 14.2C38.02 13.34 35.85 12.86 33.57 12.86H30.43C28.15 12.86 25.98 13.34 24.02 14.2L20.44 9.27C23.91 7.5 27.83 6.5 32 6.5Z"
+    fill="#3A3D40"/>
+
+  <path
+    d="M54.73 20.44L49.8 24.02C50.66 25.98 51.14 28.15 51.14 30.43V33.57C51.14 35.85 50.66 38.02 49.8 39.98L54.73 43.56C56.5 40.09 57.5 36.17 57.5 32C57.5 27.83 56.5 23.91 54.73 20.44Z"
+    fill="#3A3D40"/>
+
+  <path
+    d="M43.56 54.73L39.98 49.8C38.02 50.66 35.85 51.14 33.57 51.14H30.43C28.15 51.14 25.98 50.66 24.02 49.8L20.44 54.73C23.91 56.5 27.83 57.5 32 57.5C36.17 57.5 40.09 56.5 43.56 54.73Z"
+    fill="#3A3D40"/>
+
+  <path
+    d="M9.27 43.56L14.2 39.98C13.34 38.02 12.86 35.85 12.86 33.57V30.43C12.86 28.15 13.34 25.98 14.2 24.02L9.27 20.44C7.5 23.91 6.5 27.83 6.5 32C6.5 36.17 7.5 40.09 9.27 43.56Z"
+    fill="#3A3D40"/>
+
+  <circle cx="32" cy="32" r="20.5" stroke="#C9CAC7" stroke-width="4"/>
+  <circle cx="32" cy="32" r="11.5" stroke="#464A4E" stroke-width="5"/>
+  <circle cx="32" cy="32" r="4.7" fill="#D8D8D5"/>
+
+  <path
+    d="M47.8 16.2L52.8 11.2"
+    stroke="#FF1F2D"
+    stroke-width="4"
+    stroke-linecap="round"/>
+
+  <path
+    d="M16.2 47.8L11.2 52.8"
+    stroke="#FF1F2D"
+    stroke-width="4"
+    stroke-linecap="round"/>
+
+  <path
+    d="M23.2 18.4C25.8 16.95 28.79 16.12 32 16.12"
+    stroke="#F4F4F0"
+    stroke-width="2"
+    stroke-linecap="round"
+    opacity="0.72"/>
+
+  <path
+    d="M40.8 45.6C38.2 47.05 35.21 47.88 32 47.88"
+    stroke="#0F1113"
+    stroke-width="2"
+    stroke-linecap="round"
+    opacity="0.58"/>
+</svg>
