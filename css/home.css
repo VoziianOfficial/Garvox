@@ -643,6 +643,31 @@
     .anatomy-media {
         min-height: 430px;
     }
+
+    .track-process {
+        gap: 12px;
+    }
+
+    .track-process__step {
+        padding: 50px 18px 18px;
+    }
+
+    .track-process__step span {
+        left: auto;
+        right: 18px;
+        width: 34px;
+        height: 34px;
+        font-size: 0.78rem;
+    }
+
+    .track-process__step h3 {
+        font-size: 1.02rem;
+    }
+
+    .track-process__step p {
+        margin-top: 8px;
+        font-size: 0.88rem;
+    }
 }
 
 @media (max-width: 720px) {
@@ -708,6 +733,27 @@
     .anatomy-media {
         display: grid;
         align-content: end;
+    }
+
+    .track-process__step {
+        padding: 46px 16px 16px;
+    }
+
+    .track-process__step span {
+        top: 10px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.74rem;
+    }
+
+    .track-process__step h3 {
+        font-size: 1rem;
+    }
+
+    .track-process__step p {
+        margin-top: 7px;
+        font-size: 0.86rem;
     }
 }
 
@@ -2795,5 +2841,116 @@
     .home-service-card:hover .home-service-card__cta,
     .home-service-card:hover .home-service-card__plus {
         transform: none;
+    }
+}
+
+
+/* ==========================================================
+   FIX — PROBLEM FINDER MOBILE COMPACT ICON GRID
+   smaller equal squares, centered icons, 3 per row
+   ========================================================== */
+
+@media (max-width: 720px) {
+    .problem-finder-section {
+        padding: 28px 0 !important;
+    }
+
+    .problem-finder-section .problem-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, clamp(68px, 22vw, 88px)) !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 9px !important;
+        margin-top: 18px !important;
+    }
+
+    .problem-finder-section .problem-card {
+        position: relative !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        place-items: center !important;
+        width: 100% !important;
+        aspect-ratio: 1 / 1 !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        border-radius: 12px !important;
+    }
+
+    /* Убираем старые линии/скан на мобилке, чтобы не было кривых бликов */
+    .problem-finder-section .problem-card::before,
+    .problem-finder-section .problem-card::after {
+        display: none !important;
+    }
+
+    .problem-finder-section .problem-card__icon {
+        display: grid !important;
+        place-items: center !important;
+        width: 30px !important;
+        height: 30px !important;
+        margin: 0 !important;
+        color: rgba(244, 244, 240, 0.88);
+        transform: none !important;
+    }
+
+    .problem-finder-section .problem-card__icon svg {
+        display: block !important;
+        width: 24px !important;
+        height: 24px !important;
+        stroke: currentColor !important;
+        stroke-width: 1.65 !important;
+        fill: none !important;
+    }
+
+    .problem-finder-section .problem-card h3 {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+
+    .problem-finder-section .problem-card:hover {
+        transform: translateY(-2px) !important;
+        border-color: rgba(255, 31, 45, 0.42) !important;
+    }
+
+    .problem-finder-section .problem-card:hover .problem-card__icon {
+        color: var(--color-accent) !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .problem-finder-section .problem-grid {
+        grid-template-columns: repeat(3, clamp(64px, 24vw, 82px)) !important;
+        gap: 8px !important;
+    }
+
+    .problem-finder-section .problem-card__icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .problem-finder-section .problem-card__icon svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .problem-finder-section .problem-grid {
+        grid-template-columns: repeat(3, 62px) !important;
+        gap: 7px !important;
+    }
+
+    .problem-finder-section .problem-card__icon svg {
+        width: 20px !important;
+        height: 20px !important;
     }
 }

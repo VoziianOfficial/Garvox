@@ -3253,3 +3253,180 @@ body.menu-open {
         height: 32px;
     }
 }
+
+/* ==========================================================
+   FIX — GARAGE DOOR ANATOMY MOBILE ONLY
+   Tablet stays unchanged
+   ========================================================== */
+
+@media (max-width: 640px) {
+    .anatomy-section {
+        padding: 34px 0 !important;
+    }
+
+    .anatomy-strip {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .anatomy-strip__side {
+        display: grid !important;
+        justify-items: center !important;
+        text-align: center !important;
+        gap: 18px !important;
+    }
+
+    .anatomy-strip__side h2 {
+        margin-inline: auto !important;
+        font-size: 1.28rem !important;
+        line-height: 1.08 !important;
+        text-align: center !important;
+    }
+
+    .anatomy-strip__side h2::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .anatomy-strip__side h2::before {
+        display: none !important;
+    }
+
+    .anatomy-strip__list {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .anatomy-strip__list li {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        min-height: 36px !important;
+        padding: 8px 10px !important;
+        color: rgba(244, 244, 240, 0.9) !important;
+        font-size: 0.78rem !important;
+        font-weight: 750 !important;
+        line-height: 1 !important;
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.045) !important;
+        border: 1px solid rgba(255, 255, 255, 0.13) !important;
+        border-radius: 999px !important;
+        transform: none !important;
+    }
+
+    .anatomy-strip__list li::before {
+        display: none !important;
+    }
+
+    .anatomy-strip__list li:hover {
+        color: #ffffff !important;
+        background: rgba(255, 31, 45, 0.09) !important;
+        border-color: rgba(255, 31, 45, 0.42) !important;
+        transform: translateY(-1px) !important;
+    }
+
+    .anatomy-strip__media {
+        width: 100% !important;
+        height: 260px !important;
+        min-height: 260px !important;
+        overflow: hidden !important;
+        border-radius: 16px !important;
+    }
+
+    .anatomy-strip__media img {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .anatomy-pin::after {
+        display: none !important;
+    }
+
+    .anatomy-pin--left-1,
+    .anatomy-pin--left-2,
+    .anatomy-pin--left-3,
+    .anatomy-pin--left-4,
+    .anatomy-pin--left-5,
+    .anatomy-pin--left-6,
+    .anatomy-pin--left-7 {
+        display: none !important;
+    }
+
+    .anatomy-pin {
+        width: 10px !important;
+        height: 10px !important;
+        border-width: 1.5px !important;
+    }
+
+    .anatomy-pin--top {
+        top: 14% !important;
+        left: 52% !important;
+    }
+
+    .anatomy-pin--center {
+        top: 50% !important;
+        left: 42% !important;
+    }
+
+    .anatomy-pin--bottom {
+        right: 24% !important;
+        bottom: 12% !important;
+    }
+
+    .anatomy-pin--right {
+        top: 72% !important;
+        right: 10% !important;
+    }
+
+    .anatomy-strip__cta {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        justify-items: center !important;
+        gap: 16px !important;
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 20px !important;
+        text-align: center !important;
+        border-radius: 16px !important;
+    }
+
+    .anatomy-strip__cta p {
+        margin: 0 !important;
+        font-size: 0.96rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .anatomy-strip__cta a {
+        width: 100% !important;
+        min-height: 42px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .anatomy-strip__list {
+        gap: 7px !important;
+    }
+
+    .anatomy-strip__list li {
+        min-height: 34px !important;
+        padding: 7px 8px !important;
+        font-size: 0.74rem !important;
+    }
+
+    .anatomy-strip__media {
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+
+    .anatomy-strip__cta {
+        padding: 18px !important;
+    }
+}
