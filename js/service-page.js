@@ -59,9 +59,18 @@
     function initDoorTabs() {
         document.querySelectorAll("[data-door-tabs]").forEach((tabsRoot) => {
             const nav = tabsRoot.querySelector(".door-tabs__nav");
-            const panel = tabsRoot.querySelector("[data-door-tabs-panel]");
+            const panels = Array.from(tabsRoot.querySelectorAll("[data-door-tabs-panel]"));
+            const panel = panels[0] || null;
+            const buttons = Array.from(tabsRoot.querySelectorAll("[data-tab-target]"));
 
-            if (!nav || !panel || !Array.isArray(config.doorTabs)) return;
+            if (!nav || !panel || !buttons.length) return;
+
+            if (panels.length > 1) {
+                bindStaticDoorTabButtons(buttons, panels);
+                return;
+            }
+
+            if (!Array.isArray(config.doorTabs) || !config.doorTabs.length) return;
 
             renderDoorTabPanel(panel, config.doorTabs[0]);
             bindDoorTabButtons(tabsRoot, panel);
@@ -80,6 +89,66 @@
 
                 activateDoorTab(buttons, button);
                 renderDoorTabPanel(panel, tabData);
+            });
+
+            button.addEventListener("keydown", (event) => {
+                if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+
+                event.preventDefault();
+
+                const currentIndex = buttons.indexOf(button);
+                let nextIndex = currentIndex;
+
+                if (event.key === "ArrowRight") {
+                    nextIndex = currentIndex + 1 >= buttons.length ? 0 : currentIndex + 1;
+                }
+
+                if (event.key === "ArrowLeft") {
+                    nextIndex = currentIndex - 1 < 0 ? buttons.length - 1 : currentIndex - 1;
+                }
+
+                if (event.key === "Home") {
+                    nextIndex = 0;
+                }
+
+                if (event.key === "End") {
+                    nextIndex = buttons.length - 1;
+                }
+
+                buttons[nextIndex].focus();
+                buttons[nextIndex].click();
+            });
+        });
+    }
+
+    function bindStaticDoorTabButtons(buttons, panels) {
+        const getPanelId = (button) => {
+            return button.getAttribute("aria-controls") || `tab-panel-${button.getAttribute("data-tab-target") || ""}`;
+        };
+
+        const showPanel = (panelId) => {
+            const fallbackId = panels[0] ? panels[0].id : "";
+            const activeId = panels.some((panel) => panel.id === panelId) ? panelId : fallbackId;
+
+            panels.forEach((panel) => {
+                panel.hidden = panel.id !== activeId;
+            });
+        };
+
+        const initialActive =
+            buttons.find((button) => button.getAttribute("aria-selected") === "true") ||
+            buttons.find((button) => button.classList.contains("is-active")) ||
+            buttons[0];
+
+        if (initialActive) {
+            activateDoorTab(buttons, initialActive);
+            showPanel(getPanelId(initialActive));
+        }
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                activateDoorTab(buttons, button);
+                showPanel(getPanelId(button));
             });
 
             button.addEventListener("keydown", (event) => {
