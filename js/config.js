@@ -1,10 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — Global Website Config
-   All editable brand, contact, service, SEO, legal, FAQ,
-   asset, CTA, and repeated content values live here.
-   ========================================================== */
 
 window.SITE_CONFIG = {
     companyName: "GARVOX",

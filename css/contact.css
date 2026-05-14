@@ -1,17 +1,4 @@
-/* ==========================================================
-   GARVOX — Contact Page Styles
-   Sections:
-   - Contact hero uses global .page-hero
-   - Contact confidence
-   - What happens next light section
-   - Compact contact form
-   - Service urgency strip
-   - Aggregator-safe trust block
-   ========================================================== */
 
-/* ==========================================================
-   CONTACT CONFIDENCE
-   ========================================================== */
 
 .contact-confidence-section {
     background:
@@ -90,9 +77,6 @@
     font-size: 0.93rem;
 }
 
-/* ==========================================================
-   WHAT HAPPENS NEXT
-   ========================================================== */
 
 .contact-next-section {
     overflow: hidden;
@@ -109,9 +93,6 @@
     pointer-events: none;
 }
 
-/* ==========================================================
-   CONTACT FORM SECTION
-   ========================================================== */
 
 .contact-form-section {
     background:
@@ -194,9 +175,6 @@
     justify-items: end;
 }
 
-/* ==========================================================
-   CONTACT URGENCY
-   ========================================================== */
 
 .contact-urgency-section {
     padding-top: clamp(42px, 6vw, 78px);
@@ -204,9 +182,6 @@
     background: var(--color-bg);
 }
 
-/* ==========================================================
-   TRUST BLOCK
-   ========================================================== */
 
 .trust-block-section {
     background:
@@ -231,9 +206,6 @@
     pointer-events: none;
 }
 
-/* ==========================================================
-   NO MAP SAFETY
-   ========================================================== */
 
 .contact-page iframe[src*="maps"],
 .contact-page [data-map],
@@ -244,9 +216,6 @@
     display: none !important;
 }
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
 
 @media (max-width: 1100px) {
     .contact-form-layout {
@@ -307,9 +276,6 @@
     }
 }
 
-/* ==========================================================
-   CONTACT NEXT SECTION — COMPACT CARDS + NUMBER TOP RIGHT
-   ========================================================== */
 
 .contact-next-section .editorial-steps {
     align-items: stretch;
@@ -347,9 +313,6 @@
     line-height: 1.45;
 }
 
-/* ==========================================================
-   CONTACT NEXT SECTION — CARD HOVERS
-   ========================================================== */
 
 .contact-next-section .editorial-step {
     isolation: isolate;
@@ -448,10 +411,6 @@
     }
 }
 
-/* ==========================================================
-   CONTACT URGENCY SECTION — PHOTO BACKGROUND
-   class="section contact-urgency-section"
-   ========================================================== */
 
 .contact-urgency-section {
     position: relative;
@@ -461,7 +420,7 @@
     background: #0f1113;
 }
 
-/* Background photo */
+
 .contact-urgency-section::before {
     content: "";
     position: absolute;
@@ -475,7 +434,7 @@
     transform: scale(1.02);
 }
 
-/* Dark overlay */
+
 .contact-urgency-section::after {
     content: "";
     position: absolute;
@@ -488,7 +447,7 @@
     pointer-events: none;
 }
 
-/* Fine grid / premium texture */
+
 .contact-urgency-section .container,
 .contact-urgency-section .container-wide {
     position: relative;
@@ -501,7 +460,7 @@
     z-index: 3;
 }
 
-/* Optional red line on top */
+
 .contact-urgency-section>.container::before,
 .contact-urgency-section>.container-wide::before {
     content: "";
@@ -514,7 +473,7 @@
     box-shadow: var(--glow-red);
 }
 
-/* Make inner card more glass/photo-friendly */
+
 .contact-urgency-section .urgency-strip {
     background:
         linear-gradient(135deg, rgba(255, 31, 45, 0.12), transparent 38%),
@@ -523,7 +482,7 @@
     backdrop-filter: blur(16px);
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .contact-urgency-section {
         padding-block: 52px;
@@ -534,7 +493,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .contact-urgency-section {
         padding-block: 42px;
@@ -551,10 +510,6 @@
     }
 }
 
-/* ==========================================================
-   CONTACT CONFIDENCE — HORIZONTAL EDITORIAL LINE
-   Turns cards into clean horizontal text blocks
-   ========================================================== */
 
 .contact-confidence-section {
     overflow: hidden;
@@ -570,7 +525,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
-/* long red accent line */
+
 .contact-confidence-section .confidence-grid::before {
     content: "";
     position: absolute;
@@ -591,7 +546,7 @@
     box-shadow: 0 0 34px rgba(255, 31, 45, 0.38);
 }
 
-/* remove card look */
+
 .contact-confidence-section .confidence-card {
     position: relative;
     display: grid;
@@ -608,7 +563,7 @@
         transform var(--transition-base);
 }
 
-/* vertical separators */
+
 .contact-confidence-section .confidence-card:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -619,7 +574,7 @@
     background: rgba(255, 255, 255, 0.13);
 }
 
-/* small hover glow, not a card */
+
 .contact-confidence-section .confidence-card::before {
     content: "";
     position: absolute;
@@ -639,7 +594,7 @@
     opacity: 1;
 }
 
-/* number */
+
 .contact-confidence-section .confidence-card>span {
     position: relative;
     z-index: 2;
@@ -653,7 +608,7 @@
     letter-spacing: -0.055em;
 }
 
-/* heading */
+
 .contact-confidence-section .confidence-card h3 {
     position: relative;
     z-index: 2;
@@ -664,7 +619,7 @@
     letter-spacing: -0.035em;
 }
 
-/* small red underline under heading */
+
 .contact-confidence-section .confidence-card h3::after {
     content: "";
     display: block;
@@ -682,7 +637,7 @@
     transform: scaleX(1.45);
 }
 
-/* text */
+
 .contact-confidence-section .confidence-card p {
     position: relative;
     z-index: 2;
@@ -698,7 +653,7 @@
     color: var(--color-text);
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .contact-confidence-section .confidence-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -722,7 +677,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 720px) {
     .contact-confidence-section .confidence-grid {
         grid-template-columns: 1fr;
@@ -766,10 +721,6 @@
     }
 }
 
-/* ==========================================================
-   CONTACT CONFIDENCE — MOBILE COMPACT FINAL
-   Number/Icon in top-right corner
-   ========================================================== */
 
 @media (max-width: 720px) {
     .contact-confidence-section .confidence-grid {
@@ -796,7 +747,7 @@
         display: none !important;
     }
 
-    /* number / icon top-right */
+
     .contact-confidence-section .confidence-card>span {
         position: absolute !important;
         top: 18px !important;

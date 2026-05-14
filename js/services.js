@@ -1,13 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — Services Page Script
-   Handles:
-   - Services page dynamic enhancements
-   - Material panels from config when mount exists
-   - Style gallery from config when mount exists
-   - Provider matrix from config when mount exists
-   ========================================================== */
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -25,12 +17,6 @@
         renderProviderMatrix();
     }
 
-    /* ========================================================
-       STYLE GALLERY
-       Optional dynamic renderer.
-       If HTML already contains static cards, this will not force-replace
-       unless the mount has data-render-style-gallery.
-       ======================================================== */
 
     function renderDynamicStyleGallery() {
         const mount = document.querySelector("[data-render-style-gallery]");
@@ -56,12 +42,6 @@
             .join("");
     }
 
-    /* ========================================================
-       MATERIAL PANELS
-       Optional dynamic renderer.
-       If HTML already contains static panels, this will not force-replace
-       unless the mount has data-render-material-panels.
-       ======================================================== */
 
     function renderDynamicMaterialPanels() {
         const mount = document.querySelector("[data-render-material-panels]");
@@ -91,12 +71,6 @@
             .join("");
     }
 
-    /* ========================================================
-       PROVIDER MATRIX
-       Optional dynamic renderer.
-       Use this with:
-       <div data-provider-matrix></div>
-       ======================================================== */
 
     function renderProviderMatrix() {
         const mount = document.querySelector("[data-provider-matrix]");
@@ -125,9 +99,6 @@
     `;
     }
 
-    /* ========================================================
-       HELPERS
-       ======================================================== */
 
     function escapeHtml(value) {
         return String(value || "")

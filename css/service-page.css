@@ -1,27 +1,9 @@
-/* ==========================================================
-   GARVOX — Individual Service Page Styles
-   Sections:
-   - Service hero uses global .page-hero
-   - Service overview
-   - What to ask providers light section
-   - Horizontal door type tabs
-   - Provider question cards
-   - Before / After split
-   - Sound selector
-   - Photo banner with mini cards
-   ========================================================== */
 
-/* ==========================================================
-   SERVICE HERO
-   ========================================================== */
 
 .service-hero .page-hero__mini-panel strong {
     color: var(--color-heading);
 }
 
-/* ==========================================================
-   SERVICE OVERVIEW
-   ========================================================== */
 
 .service-overview-section {
     background:
@@ -33,9 +15,6 @@
     grid-template-columns: 1fr;
 }
 
-/* ==========================================================
-   WHAT TO ASK PROVIDERS
-   ========================================================== */
 
 .service-ask-section {
     overflow: hidden;
@@ -53,9 +32,6 @@
     pointer-events: none;
 }
 
-/* ==========================================================
-   HORIZONTAL DOOR TYPE TABS
-   ========================================================== */
 
 .door-tabs-section {
     background:
@@ -200,9 +176,6 @@
     transform: translateY(-50%);
 }
 
-/* ==========================================================
-   PROVIDER QUESTIONS
-   ========================================================== */
 
 .provider-questions-section {
     background:
@@ -233,9 +206,6 @@
     transform: scaleX(1);
 }
 
-/* ==========================================================
-   BEFORE / AFTER SPLIT
-   ========================================================== */
 
 .before-after-section {
     background:
@@ -345,9 +315,6 @@
         linear-gradient(135deg, rgba(255, 31, 45, 0.18), transparent 50%);
 }
 
-/* ==========================================================
-   SOUND SELECTOR
-   ========================================================== */
 
 .sound-selector-section {
     background:
@@ -493,9 +460,6 @@
     transform: translateY(-50%);
 }
 
-/* ==========================================================
-   SERVICE URGENCY SECTION
-   ========================================================== */
 
 .repair-urgency-section {
     padding-top: clamp(42px, 6vw, 78px);
@@ -503,9 +467,6 @@
     background: var(--color-bg);
 }
 
-/* ==========================================================
-   PHOTO BANNER
-   ========================================================== */
 
 .photo-banner-section {
     background:
@@ -607,9 +568,6 @@
     font-size: 0.88rem;
 }
 
-/* ==========================================================
-   SERVICE PAGE FAQ
-   ========================================================== */
 
 .service-detail-page .faq-section {
     background:
@@ -617,9 +575,6 @@
         var(--color-bg-deep);
 }
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
 
 @media (max-width: 1100px) {
 
@@ -730,10 +685,6 @@
     }
 }
 
-/* ==========================================================
-   NEW DESIGN — DECISION RAIL PHOTO SECTION
-   Paste at the VERY END of service-page.css
-   ========================================================== */
 
 .decision-photo-section {
     padding-block: clamp(54px, 7vw, 96px) !important;
@@ -873,7 +824,6 @@
     transform: translateX(120%);
 }
 
-/* Right decision rail */
 
 .decision-rail {
     position: relative;
@@ -972,7 +922,6 @@
     filter: grayscale(0.06) saturate(0.82) contrast(1.12) brightness(0.78);
 }
 
-/* Tablet */
 
 @media (max-width: 980px) {
     .decision-photo {
@@ -999,7 +948,6 @@
     }
 }
 
-/* Mobile */
 
 @media (max-width: 640px) {
     .decision-photo-section {
@@ -1064,10 +1012,6 @@
     }
 }
 
-/* ==========================================================
-   INSTALLATION BRIEF SECTION — NEW PREMIUM LAYOUT
-   Paste at the VERY END of service-page.css
-   ========================================================== */
 
 .service-overview-section.install-brief-section {
     padding-block: clamp(58px, 7vw, 104px) !important;
@@ -1109,7 +1053,6 @@
     z-index: 2;
 }
 
-/* Left content */
 
 .install-brief__intro {
     display: grid;
@@ -1181,7 +1124,6 @@
     transform: translateX(120%);
 }
 
-/* Center image */
 
 .install-brief__media {
     min-height: clamp(460px, 46vw, 620px);
@@ -1286,7 +1228,6 @@
     }
 }
 
-/* Right specs */
 
 .install-brief__specs {
     display: grid;
@@ -1358,7 +1299,6 @@
     color: #ffffff;
 }
 
-/* Tablet */
 
 @media (max-width: 1100px) {
     .install-brief {
@@ -1412,7 +1352,6 @@
     }
 }
 
-/* Mobile */
 
 @media (max-width: 560px) {
     .service-overview-section.install-brief-section {
@@ -1485,7 +1424,6 @@
     }
 }
 
-/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1508,10 +1446,6 @@
     }
 }
 
-/* ==========================================================
-   DOOR TABS — FIX IMAGE HEIGHT
-   Photo no longer stretches the whole panel
-   ========================================================== */
 
 .door-tabs__panel {
     display: grid;
@@ -1547,7 +1481,7 @@
     align-self: center;
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .door-tabs__panel {
         grid-template-columns: 1fr;
@@ -1558,7 +1492,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .door-tabs__media {
         height: 240px;
@@ -1566,9 +1500,6 @@
     }
 }
 
-/* ==========================================================
-   FIX — QUESTION CARDS COMPACT ON TABLET / MOBILE
-   ========================================================== */
 
 @media (max-width: 980px) {
     .question-card-grid {

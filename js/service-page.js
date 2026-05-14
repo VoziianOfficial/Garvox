@@ -1,14 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — Individual Service Page Script
-   Handles:
-   - horizontal garage-door-type tabs
-   - service-specific dynamic safety checks
-   - sound selector on Openers page
-   - service page FAQ helpers
-   - current service data sync from config
-   ========================================================== */
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -28,9 +19,6 @@
         verifyServicePageRules();
     }
 
-    /* ========================================================
-       CURRENT SERVICE DATA
-       ======================================================== */
 
     function getCurrentServiceId() {
         return document.body.getAttribute("data-service-id") || "";
@@ -67,9 +55,6 @@
         });
     }
 
-    /* ========================================================
-       HORIZONTAL DOOR TYPE TABS
-       ======================================================== */
 
     function initDoorTabs() {
         document.querySelectorAll("[data-door-tabs]").forEach((tabsRoot) => {
@@ -166,9 +151,6 @@
     `;
     }
 
-    /* ========================================================
-       SOUND SELECTOR — OPENERS PAGE
-       ======================================================== */
 
     function initSoundSelector() {
         document.querySelectorAll("[data-sound-selector]").forEach((selectorRoot) => {
@@ -256,10 +238,6 @@
     `;
     }
 
-    /* ========================================================
-       OPTIONAL DYNAMIC SERVICE DATA
-       Use only when mounts exist.
-       ======================================================== */
 
     function renderOptionalServiceData() {
         const service = getCurrentService();
@@ -308,9 +286,6 @@
         });
     }
 
-    /* ========================================================
-       SERVICE PAGE QA SAFETY
-       ======================================================== */
 
     function verifyServicePageRules() {
         const serviceId = getCurrentServiceId();
@@ -354,9 +329,6 @@
         });
     }
 
-    /* ========================================================
-       HELPERS
-       ======================================================== */
 
     function setText(selector, value) {
         if (!value) return;

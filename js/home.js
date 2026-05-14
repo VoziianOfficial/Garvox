@@ -1,13 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — Home Page Script
-   Handles:
-   - calm hero slideshow
-   - hero pagination
-   - config-driven slides
-   - prefers-reduced-motion safety
-   ========================================================== */
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -24,9 +16,6 @@
         initHomeHeroSlideshow();
     }
 
-    /* ========================================================
-       HERO CONTENT FROM CONFIG
-       ======================================================== */
 
     function enhanceHomeHeroFromConfig() {
         const slidesMount = document.querySelector("[data-home-hero-slides]");
@@ -63,9 +52,6 @@
             .join("");
     }
 
-    /* ========================================================
-       HERO SLIDESHOW
-       ======================================================== */
 
     function initHomeHeroSlideshow() {
         const hero = document.querySelector("[data-home-hero]");
@@ -144,9 +130,6 @@
         start();
     }
 
-    /* ========================================================
-       HELPERS
-       ======================================================== */
 
     function normalizeIndex(index, length) {
         if (index < 0) return length - 1;

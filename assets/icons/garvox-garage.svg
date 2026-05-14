@@ -1,0 +1,89 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="steelTop" x1="112" y1="86" x2="404" y2="210">
+      <stop offset="0%" stop-color="#F2F2EE"/>
+      <stop offset="28%" stop-color="#8F969A"/>
+      <stop offset="62%" stop-color="#343A3E"/>
+      <stop offset="100%" stop-color="#111315"/>
+    </linearGradient>
+
+    <linearGradient id="doorSteel" x1="120" y1="170" x2="392" y2="410">
+      <stop offset="0%" stop-color="#5A6064"/>
+      <stop offset="35%" stop-color="#2E3438"/>
+      <stop offset="72%" stop-color="#171A1D"/>
+      <stop offset="100%" stop-color="#080A0C"/>
+    </linearGradient>
+
+    <linearGradient id="redLine" x1="116" y1="282" x2="396" y2="282">
+      <stop offset="0%" stop-color="#7A0A12" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#FF1F2D"/>
+      <stop offset="70%" stop-color="#FF3845"/>
+      <stop offset="100%" stop-color="#7A0A12" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="garageShadow" x="70" y="64" width="372" height="382" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#FF1F2D" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#garageShadow)">
+
+    <path d="M92 176L256 78L420 176H384L256 104L128 176H92Z"
+      fill="url(#steelTop)"/>
+
+    <path d="M118 176H394V406H118V176Z"
+      fill="#111315"/>
+
+
+    <path d="M118 176H394V406H118V176Z"
+      stroke="#7D8589"
+      stroke-width="10"
+      stroke-linejoin="round"/>
+
+
+    <path d="M146 206H366V390H146V206Z"
+      fill="url(#doorSteel)"
+      stroke="#434A4E"
+      stroke-width="6"/>
+
+
+    <path d="M146 250H366" stroke="#798084" stroke-opacity="0.55" stroke-width="5"/>
+    <path d="M146 294H366" stroke="#798084" stroke-opacity="0.48" stroke-width="5"/>
+    <path d="M146 338H366" stroke="#798084" stroke-opacity="0.42" stroke-width="5"/>
+
+    <path d="M201 206V390" stroke="#0B0D0F" stroke-opacity="0.68" stroke-width="4"/>
+    <path d="M256 206V390" stroke="#0B0D0F" stroke-opacity="0.68" stroke-width="4"/>
+    <path d="M311 206V390" stroke="#0B0D0F" stroke-opacity="0.68" stroke-width="4"/>
+
+
+    <path d="M146 206H366" stroke="white" stroke-opacity="0.3" stroke-width="4"/>
+    <path d="M146 390H366" stroke="#000000" stroke-opacity="0.55" stroke-width="6"/>
+
+
+    <path d="M116 282H396"
+      stroke="url(#redLine)"
+      stroke-width="8"
+      stroke-linecap="round"/>
+
+    <path d="M130 292H382"
+      stroke="#FF1F2D"
+      stroke-opacity="0.35"
+      stroke-width="2"
+      stroke-linecap="round"/>
+
+
+    <circle cx="256" cy="158" r="26" fill="#171A1D" stroke="#8E969A" stroke-width="6"/>
+    <circle cx="256" cy="158" r="11" fill="#090B0D" stroke="#D1D5D6" stroke-width="4"/>
+
+    <circle cx="256" cy="132" r="4" fill="#C9CED0"/>
+    <circle cx="278" cy="145" r="4" fill="#C9CED0"/>
+    <circle cx="278" cy="171" r="4" fill="#C9CED0"/>
+    <circle cx="256" cy="184" r="4" fill="#C9CED0"/>
+    <circle cx="234" cy="171" r="4" fill="#C9CED0"/>
+    <circle cx="234" cy="145" r="4" fill="#C9CED0"/>
+
+
+    <circle cx="378" cy="198" r="7" fill="#FF1F2D" stroke="#FFFFFF" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,12 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — About Page Script
-   Handles:
-   - clickable infinite service marquee enhancement
-   - pause / slow marquee on hover and focus
-   - accessibility labels for repeated marquee links
-   ========================================================== */
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -23,12 +16,6 @@
         renderDynamicMarqueeIfNeeded();
     }
 
-    /* ========================================================
-       DYNAMIC MARQUEE
-       Optional:
-       If the page has [data-service-marquee], this creates the full
-       clickable infinite service marquee from config.
-       ======================================================== */
 
     function renderDynamicMarqueeIfNeeded() {
         const mount = document.querySelector("[data-service-marquee]");
@@ -56,9 +43,6 @@
         enhanceServiceMarquee();
     }
 
-    /* ========================================================
-       MARQUEE ENHANCEMENT
-       ======================================================== */
 
     function enhanceServiceMarquee() {
         const marquees = document.querySelectorAll(".service-marquee");
@@ -100,9 +84,6 @@
         });
     }
 
-    /* ========================================================
-       HELPERS
-       ======================================================== */
 
     function escapeHtml(value) {
         return String(value || "")

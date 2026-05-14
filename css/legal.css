@@ -1,15 +1,4 @@
-/* ==========================================================
-   GARVOX — Legal Page Styles
-   Sections:
-   - Legal hero uses global .page-hero
-   - Legal sidebar
-   - Legal document
-   - Legal notice light section
-   ========================================================== */
 
-/* ==========================================================
-   LEGAL HERO
-   ========================================================== */
 
 .legal-hero {
     min-height: clamp(430px, 58vh, 620px);
@@ -23,9 +12,6 @@
     max-width: 720px;
 }
 
-/* ==========================================================
-   LEGAL CONTENT LAYOUT
-   ========================================================== */
 
 .legal-content-section {
     background:
@@ -40,9 +26,6 @@
     gap: clamp(24px, 4vw, 56px);
 }
 
-/* ==========================================================
-   LEGAL SIDEBAR
-   ========================================================== */
 
 .legal-sidebar {
     position: sticky;
@@ -170,9 +153,6 @@
     color: var(--color-accent);
 }
 
-/* ==========================================================
-   LEGAL DOCUMENT
-   ========================================================== */
 
 .legal-document {
     overflow: hidden;
@@ -245,9 +225,6 @@
     color: var(--color-accent);
 }
 
-/* ==========================================================
-   LEGAL NOTICE LIGHT SECTION
-   ========================================================== */
 
 .legal-notice-section {
     overflow: hidden;
@@ -261,9 +238,6 @@
     font-size: 1rem;
 }
 
-/* ==========================================================
-   POLICY EXPLANATION / TERMS RESPONSIBILITY
-   ========================================================== */
 
 .policy-explanation-section,
 .terms-responsibility-section {
@@ -272,9 +246,6 @@
         var(--color-bg-deep);
 }
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
 
 @media (max-width: 980px) {
     .legal-layout {

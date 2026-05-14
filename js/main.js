@@ -1,22 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — Shared Website Script
-   Handles:
-   - page meta from config
-   - shared sticky header
-   - shared footer
-   - dynamic config injection
-   - service cards
-   - quick navigation chips
-   - FAQ blocks + FAQ JSON-LD
-   - policy confirmation banner
-   - mobile menu
-   - services dropdown with delayed close
-   - form validation
-   - CTA strips
-   - legacy hardcoded data replacement
-   ========================================================== */
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -60,9 +43,6 @@
     document.documentElement.classList.add("site-ready");
   }
 
-    /* ========================================================
-       DOM MOUNTS
-       ======================================================== */
 
     function ensureSharedMounts() {
         if (!document.querySelector("[data-site-header]")) {
@@ -84,9 +64,6 @@
         }
     }
 
-    /* ========================================================
-       PAGE META
-       ======================================================== */
 
     function applyPageMeta() {
         const page = getCurrentPage();
@@ -120,9 +97,6 @@
         return filename || "index.html";
     }
 
-    /* ========================================================
-       HEADER
-       ======================================================== */
 
     function renderHeader() {
         const mount = document.querySelector("[data-site-header]");
@@ -205,7 +179,7 @@
 
         markActiveNavLinks();
     }
-  
+
   function moveMobileMenuToBody() {
     const menu = document.querySelector("[data-mobile-menu]");
 
@@ -319,9 +293,6 @@
         });
     }
 
-    /* ========================================================
-       FOOTER
-       ======================================================== */
 
     function renderFooter() {
         const mount = document.querySelector("[data-site-footer]");
@@ -408,9 +379,6 @@
     `;
     }
 
-    /* ========================================================
-       DYNAMIC CONTENT INJECTION
-       ======================================================== */
 
     function injectDynamicContent() {
         setText("[data-company-name]", config.companyName);
@@ -494,9 +462,6 @@
         });
     }
 
-    /* ========================================================
-       QUICK NAVIGATION
-       ======================================================== */
 
     function renderQuickNavs() {
         document.querySelectorAll("[data-quick-nav]").forEach((mount) => {
@@ -516,9 +481,6 @@
         });
     }
 
-    /* ========================================================
-       SERVICE CARDS
-       ======================================================== */
 
     function renderServiceCards() {
         document.querySelectorAll("[data-service-cards]").forEach((mount) => {
@@ -559,9 +521,6 @@
     `;
     }
 
-    /* ========================================================
-       RED LINE CTA
-       ======================================================== */
 
     function renderRedLineCtas() {
         document.querySelectorAll("[data-red-line-cta]").forEach((mount) => {
@@ -593,9 +552,6 @@
         });
     }
 
-    /* ========================================================
-       URGENCY STRIP
-       ======================================================== */
 
     function renderUrgencyStrips() {
         document.querySelectorAll("[data-urgency-strip]").forEach((mount) => {
@@ -628,9 +584,6 @@
         });
     }
 
-    /* ========================================================
-       FAQ
-       ======================================================== */
 
     function renderFaqBlocks() {
         document.querySelectorAll("[data-faq-list]").forEach((mount) => {
@@ -749,9 +702,6 @@
         });
     }
 
-    /* ========================================================
-       POLICY BANNER
-       ======================================================== */
 
     function renderPolicyBanner() {
         const mount = document.querySelector("[data-policy-banner]");
@@ -803,9 +753,6 @@
         });
     }
 
-    /* ========================================================
-       HEADER DROPDOWN
-       ======================================================== */
 
     function initHeaderDropdown() {
         const dropdown = document.querySelector("[data-services-dropdown]");
@@ -857,9 +804,6 @@
         });
     }
 
-    /* ========================================================
-       MOBILE MENU
-       ======================================================== */
 
     function initMobileMenu() {
         const menu = document.querySelector("[data-mobile-menu]");
@@ -950,9 +894,6 @@
         });
     }
 
-    /* ========================================================
-       FORMS
-       ======================================================== */
 
     function initForms() {
         document.querySelectorAll("[data-form]").forEach((mount) => {
@@ -1091,9 +1032,6 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
     }
 
-    /* ========================================================
-       INTERACTIONS
-       ======================================================== */
 
     function initInteractiveCards() {
         document.querySelectorAll(".red-scan-card").forEach((card) => {
@@ -1140,9 +1078,6 @@
         return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
 
-    /* ========================================================
-       EMPTY LINKS / OVERFLOW SAFETY
-       ======================================================== */
 
     function preventEmptyLinks() {
         document.querySelectorAll("a").forEach((link) => {
@@ -1163,9 +1098,6 @@
         }, 150));
     }
 
-    /* ========================================================
-       LEGACY DATA REPLACEMENT
-       ======================================================== */
 
     function replaceLegacySiteData() {
         if (!config.legacyReplace) return;
@@ -1252,9 +1184,6 @@
         });
     }
 
-    /* ========================================================
-       ICONS
-       ======================================================== */
 
     function iconSvg(name) {
         const icons = {
@@ -1364,9 +1293,6 @@
         return icons[name] || icons["arrow-right"];
     }
 
-    /* ========================================================
-       HELPERS
-       ======================================================== */
 
     function escapeHtml(value) {
         return String(value || "")

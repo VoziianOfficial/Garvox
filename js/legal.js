@@ -1,13 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — Legal Pages Script
-   Handles:
-   - legal navigation active state
-   - dynamic legal contact values
-   - legal page safety checks
-   - readable legal anchor behavior
-   ========================================================== */
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -26,9 +18,6 @@
         verifyLegalPageRules();
     }
 
-    /* ========================================================
-       ACTIVE LEGAL NAV
-       ======================================================== */
 
     function markActiveLegalLink() {
         const page = getCurrentPage();
@@ -57,9 +46,6 @@
         return filename || "index.html";
     }
 
-    /* ========================================================
-       DYNAMIC LEGAL CONTACT VALUES
-       ======================================================== */
 
     function syncLegalContactValues() {
         setText("[data-company-name]", config.companyName);
@@ -90,9 +76,6 @@
         });
     }
 
-    /* ========================================================
-       LEGAL SECTION ANCHORS
-       ======================================================== */
 
     function addLegalSectionAnchors() {
         const headings = document.querySelectorAll(".legal-document__body h3");
@@ -133,9 +116,6 @@
         return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
 
-    /* ========================================================
-       LEGAL PAGE QA SAFETY
-       ======================================================== */
 
     function verifyLegalPageRules() {
         const form = document.querySelector("form");

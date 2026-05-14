@@ -1,19 +1,4 @@
-/* ==========================================================
-   GARVOX — Services Page Styles
-   Sections:
-   - Services hero uses global .page-hero
-   - Quick navigation
-   - Photo-based service cards
-   - Before You Compare light section
-   - Garage Style Gallery
-   - Compare by Material
-   - Provider Fit Matrix
-   - Dark Photo Banner With Mini Cards
-   ========================================================== */
 
-/* ==========================================================
-   SERVICES QUICK NAV
-   ========================================================== */
 
 .services-quick-nav {
     padding: 28px 0;
@@ -41,9 +26,6 @@
     justify-content: flex-end;
 }
 
-/* ==========================================================
-   SERVICES INTRO / PHOTO CARDS
-   ========================================================== */
 
 .services-cards-section {
     background:
@@ -110,9 +92,6 @@
     font-size: 0.88rem;
 }
 
-/* ==========================================================
-   BEFORE YOU COMPARE — LIGHT SECTION
-   ========================================================== */
 
 .before-compare-section {
     overflow: hidden;
@@ -223,9 +202,6 @@
     font-size: 0.93rem;
 }
 
-/* ==========================================================
-   GARAGE STYLE GALLERY
-   ========================================================== */
 
 .garage-style-section {
     background:
@@ -335,9 +311,6 @@
     opacity: 1;
 }
 
-/* ==========================================================
-   COMPARE BY MATERIAL
-   ========================================================== */
 
 .material-section {
     background:
@@ -459,9 +432,6 @@
     opacity: 1;
 }
 
-/* ==========================================================
-   PROVIDER FIT MATRIX
-   ========================================================== */
 
 .provider-matrix-section {
     background:
@@ -540,9 +510,6 @@
     font-weight: 800;
 }
 
-/* ==========================================================
-   DARK PHOTO BANNER WITH MINI CARDS
-   ========================================================== */
 
 .photo-banner-section {
     background: var(--color-bg);
@@ -653,9 +620,6 @@
     font-size: 0.88rem;
 }
 
-/* ==========================================================
-   SERVICES FAQ SECTION
-   ========================================================== */
 
 .services-faq-section {
     background:
@@ -676,9 +640,6 @@
     margin-bottom: 0;
 }
 
-/* ==========================================================
-   RESPONSIVE
-   ========================================================== */
 
 @media (max-width: 1180px) {
     .style-gallery {
@@ -805,12 +766,6 @@
     }
 }
 
-/* ==========================================================
-   FIX — SERVICES PAGE STYLE GALLERY CLASSES
-   Matches services.html:
-   .style-gallery-grid
-   .style-card
-   ========================================================== */
 
 .style-gallery-section {
     background:
@@ -921,7 +876,6 @@
     opacity: 1;
 }
 
-/* Material panels compatibility with services.html static markup */
 
 .material-panel>img {
     position: absolute;
@@ -985,11 +939,6 @@
     }
 }
 
-
-/* ==========================================================
-   COMPARE / VERIFY SECTION — LIKE REFERENCE
-   Uses class="section style-gallery-section"
-   ========================================================== */
 
 .style-gallery-section {
     padding: 0 !important;
@@ -1199,7 +1148,6 @@
     font-size: clamp(0.96rem, 1vw, 1.05rem);
 }
 
-/* Hover effects */
 
 .style-gallery-section:hover .compare-verify__bearing img {
     transform: rotate(-4deg) translateY(-4px);
@@ -1220,7 +1168,6 @@
     text-shadow: 0 0 24px rgba(255, 31, 45, 0.58);
 }
 
-/* Tablet */
 
 @media (max-width: 1080px) {
     .compare-verify {
@@ -1264,7 +1211,6 @@
     }
 }
 
-/* Mobile */
 
 @media (max-width: 560px) {
     .compare-verify {
@@ -1294,7 +1240,6 @@
     }
 }
 
-/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
     .compare-verify__button,
@@ -1311,9 +1256,6 @@
     }
 }
 
-/* ==========================================================
-   QUICK NAV SECTION — RIGHT COMPACT PHOTO
-   ========================================================== */
 
 .quick-nav-section {
     padding-block: clamp(42px, 5vw, 72px);
@@ -1386,7 +1328,7 @@
     filter: saturate(0.9) contrast(1.1) brightness(0.92);
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .quick-nav-heading {
         grid-template-columns: 1fr;
@@ -1398,7 +1340,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .quick-nav-section {
         padding-block: 38px;
@@ -1409,9 +1351,6 @@
     }
 }
 
-/* ==========================================================
-   FINAL — QUICK NAV PHOTO FULL HEIGHT OF CONTAINER
-   ========================================================== */
 
 .quick-nav-section {
     padding-block: clamp(46px, 6vw, 86px) !important;
@@ -1491,7 +1430,7 @@
     filter: saturate(0.9) contrast(1.1) brightness(0.92);
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .quick-nav-layout {
         grid-template-columns: 1fr;
@@ -1506,7 +1445,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .quick-nav-section {
         padding-block: 38px !important;
@@ -1521,13 +1460,6 @@
     }
 }
 
-
-
-/* ==========================================================
-   FINAL — COMPARE / VERIFY SECTION RESPONSIVE FIX
-   Works with:
-   class="section style-gallery-section compare-verify-section"
-   ========================================================== */
 
 .compare-verify-section {
     padding: 0 !important;
@@ -1746,10 +1678,6 @@
 }
 
 
-/* ==========================================================
-   TABLET
-   ========================================================== */
-
 @media (max-width: 1080px) {
     .compare-verify-section .compare-verify {
         grid-template-columns: minmax(0, 1fr) minmax(200px, 0.65fr) minmax(0, 1fr);
@@ -1792,10 +1720,6 @@
 }
 
 
-/* ==========================================================
-   SMALL TABLET / LARGE MOBILE
-   ========================================================== */
-
 @media (max-width: 820px) {
     .compare-verify-section .compare-verify {
         grid-template-columns: 1fr;
@@ -1831,10 +1755,6 @@
     }
 }
 
-
-/* ==========================================================
-   MOBILE
-   ========================================================== */
 
 @media (max-width: 560px) {
     .compare-verify-section {
@@ -1896,10 +1816,6 @@
     }
 }
 
-
-/* ==========================================================
-   VERY SMALL MOBILE
-   ========================================================== */
 
 @media (max-width: 380px) {
     .compare-verify__side {

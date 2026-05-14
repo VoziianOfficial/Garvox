@@ -1,13 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   GARVOX — Contact Page Script
-   Handles:
-   - contact page enhancements
-   - service select helper text
-   - no-map safety check
-   - compact form focus states
-   ========================================================== */
 
 (function () {
     const config = window.SITE_CONFIG;
@@ -25,9 +17,6 @@
         syncContactLinks();
     }
 
-    /* ========================================================
-       CONTACT FORM ENHANCEMENTS
-       ======================================================== */
 
     function enhanceContactForm() {
         const formMount = document.querySelector("[data-form='contact']");
@@ -90,9 +79,6 @@
         });
     }
 
-    /* ========================================================
-       NO MAP SAFETY
-       ======================================================== */
 
     function preventMapSections() {
         const forbiddenSelectors = [
@@ -113,9 +99,6 @@
         });
     }
 
-    /* ========================================================
-       CONTACT LINKS
-       ======================================================== */
 
     function syncContactLinks() {
         document.querySelectorAll("[data-phone-link]").forEach((link) => {
