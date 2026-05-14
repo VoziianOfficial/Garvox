@@ -447,3 +447,106 @@
         transform: none;
     }
 }
+
+/* ==========================================================
+   CONTACT URGENCY SECTION — PHOTO BACKGROUND
+   class="section contact-urgency-section"
+   ========================================================== */
+
+.contact-urgency-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-block: clamp(56px, 7vw, 96px);
+    background: #0f1113;
+}
+
+/* Background photo */
+.contact-urgency-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background-image: url("../assets/images/contact-urgency-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(0.12) saturate(0.72) contrast(1.08) brightness(0.72);
+    transform: scale(1.02);
+}
+
+/* Dark overlay */
+.contact-urgency-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(90deg, rgba(15, 17, 19, 0.92), rgba(15, 17, 19, 0.72) 52%, rgba(15, 17, 19, 0.54)),
+        linear-gradient(180deg, rgba(15, 17, 19, 0.26), rgba(15, 17, 19, 0.88)),
+        radial-gradient(circle at 82% 24%, rgba(255, 31, 45, 0.18), transparent 28rem);
+    pointer-events: none;
+}
+
+/* Fine grid / premium texture */
+.contact-urgency-section .container,
+.contact-urgency-section .container-wide {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-urgency-section .urgency-strip,
+.contact-urgency-section [class*="urgency"] {
+    position: relative;
+    z-index: 3;
+}
+
+/* Optional red line on top */
+.contact-urgency-section>.container::before,
+.contact-urgency-section>.container-wide::before {
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: min(180px, 42vw);
+    height: 2px;
+    background: var(--color-accent);
+    box-shadow: var(--glow-red);
+}
+
+/* Make inner card more glass/photo-friendly */
+.contact-urgency-section .urgency-strip {
+    background:
+        linear-gradient(135deg, rgba(255, 31, 45, 0.12), transparent 38%),
+        rgba(15, 17, 19, 0.76);
+    border-color: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(16px);
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .contact-urgency-section {
+        padding-block: 52px;
+    }
+
+    .contact-urgency-section::before {
+        background-position: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+    .contact-urgency-section {
+        padding-block: 42px;
+    }
+
+    .contact-urgency-section::before {
+        filter: grayscale(0.16) saturate(0.65) contrast(1.06) brightness(0.58);
+    }
+
+    .contact-urgency-section::after {
+        background:
+            linear-gradient(180deg, rgba(15, 17, 19, 0.68), rgba(15, 17, 19, 0.94)),
+            radial-gradient(circle at 50% 18%, rgba(255, 31, 45, 0.14), transparent 20rem);
+    }
+}

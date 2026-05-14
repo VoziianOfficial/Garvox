@@ -70,7 +70,7 @@ window.SITE_CONFIG = {
         images: {
             garageAnatomy: "./assets/images/garage-anatomy.jpg",
             cta: "./assets/images/cta-garage-door.jpg",
-            modernGarageDoor: "./assets/images/modern-garage-door.jpg",
+            modernGarageDoor: "./assets/images/material-glass.jpg",
             traditionalGarageDoor: "./assets/images/traditional-garage-door.jpg",
             beforeDoor: "./assets/images/before-door.jpg",
             afterDoor: "./assets/images/after-door.jpg",
