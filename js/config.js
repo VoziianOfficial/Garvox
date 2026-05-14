@@ -253,7 +253,7 @@ window.SITE_CONFIG = {
             href: "garage-door-openers.html",
             icon: "radio-tower",
             image: "./assets/images/service-openers.jpg",
-            heroImage: "./assets/images/hero-openers.jpg",
+            heroImage: "./assets/images/service-openers.jpg",
             summary:
                 "Compare provider options for garage door opener projects, including motor type, smart features, remotes, sensors, quiet operation, and compatibility.",
             cardText:
