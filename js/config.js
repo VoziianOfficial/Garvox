@@ -185,7 +185,7 @@ window.SITE_CONFIG = {
             href: "garage-door-replacement.html",
             icon: "replace",
             image: "./assets/images/service-replacement.jpg",
-            heroImage: "./assets/images/hero-replacement.jpg",
+            heroImage: "./assets/images/service-replacement.jpg",
             summary:
                 "Compare provider options for replacement-style garage door projects, including removal, material selection, insulation, opener fit, and quote details.",
             cardText:
