@@ -28,6 +28,7 @@
     renderRedLineCtas();
     renderUrgencyStrips();
 
+    replaceHardcodedCompanyData();
     replaceLegacySiteData();
 
     initHeaderDropdown();
@@ -1097,6 +1098,59 @@
             document.documentElement.classList.add("overflow-guard");
         }, 150));
     }
+  
+  function replaceHardcodedCompanyData() {
+    const textReplacements = [
+      ["GARVOX Provider Matching LLC", config.companyId],
+      ["GARVOX", config.companyName],
+      ["Call (888) 432-1098", config.phoneLabel],
+      ["(888) 432-1098", config.phone],
+      ["contact@garvox.com", config.email],
+      ["1209 Orange Street, Wilmington, DE 19801, USA", config.address.full]
+    ];
+
+    replaceTextNodes(document.body, textReplacements);
+
+    document.querySelectorAll('a[href="tel:+18884321098"]').forEach((link) => {
+      link.setAttribute("href", config.phoneHref);
+    });
+
+    document.querySelectorAll('a[href="mailto:contact@garvox.com"]').forEach((link) => {
+      link.setAttribute("href", config.emailHref);
+    });
+
+    document.querySelectorAll("[data-company-name]").forEach((node) => {
+      node.textContent = config.companyName;
+    });
+
+    document.querySelectorAll("[data-company-id]").forEach((node) => {
+      node.textContent = config.companyId;
+    });
+
+    document.querySelectorAll("[data-phone-text]").forEach((node) => {
+      node.textContent = config.phoneLabel;
+    });
+
+    document.querySelectorAll("[data-phone-number]").forEach((node) => {
+      node.textContent = config.phone;
+    });
+
+    document.querySelectorAll("[data-email-text]").forEach((node) => {
+      node.textContent = config.email;
+    });
+
+    document.querySelectorAll("[data-address-text]").forEach((node) => {
+      node.textContent = config.address.full;
+    });
+
+    document.querySelectorAll("[data-phone-link]").forEach((node) => {
+      node.setAttribute("href", config.phoneHref);
+    });
+
+    document.querySelectorAll("[data-email-link]").forEach((node) => {
+      node.setAttribute("href", config.emailHref);
+    });
+  }
 
 
     function replaceLegacySiteData() {
