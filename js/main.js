@@ -28,36 +28,37 @@
 
     document.addEventListener("DOMContentLoaded", initSite);
 
-    function initSite() {
-        ensureSharedMounts();
+  function initSite() {
+    ensureSharedMounts();
 
-        applyPageMeta();
-        renderHeader();
-        renderFooter();
+    applyPageMeta();
+    renderHeader();
+    moveMobileMenuToBody();
+    renderFooter();
 
-        injectDynamicContent();
-        renderQuickNavs();
-        renderServiceCards();
-        renderFaqBlocks();
-        renderFaqSchema();
-        renderPolicyBanner();
-        renderRedLineCtas();
-        renderUrgencyStrips();
+    injectDynamicContent();
+    renderQuickNavs();
+    renderServiceCards();
+    renderFaqBlocks();
+    renderFaqSchema();
+    renderPolicyBanner();
+    renderRedLineCtas();
+    renderUrgencyStrips();
 
-        replaceLegacySiteData();
+    replaceLegacySiteData();
 
-        initHeaderDropdown();
-        initMobileMenu();
-        initFaqAccordions();
-        initForms();
-        initInteractiveCards();
-        initAnchorLinks();
+    initHeaderDropdown();
+    initMobileMenu();
+    initFaqAccordions();
+    initForms();
+    initInteractiveCards();
+    initAnchorLinks();
 
-        preventEmptyLinks();
-        preventHorizontalScrollIssues();
+    preventEmptyLinks();
+    preventHorizontalScrollIssues();
 
-        document.documentElement.classList.add("site-ready");
-    }
+    document.documentElement.classList.add("site-ready");
+  }
 
     /* ========================================================
        DOM MOUNTS
@@ -138,18 +139,12 @@
               </a>
 
               <div class="services-dropdown" data-dropdown-panel role="menu">
-                <div class="services-dropdown__inner">
-                  <div class="services-dropdown__intro">
-                    <span class="eyebrow">Provider categories</span>
-                    <strong>Compare by project type</strong>
-                    <p>Explore the 4 GARVOX garage door categories and verify provider details directly.</p>
-                  </div>
-
-                  <div class="services-dropdown__grid">
-                    ${config.services.map(renderDropdownService).join("")}
-                  </div>
-                </div>
-              </div>
+  <div class="services-dropdown__inner services-dropdown__inner--simple">
+    <div class="services-dropdown__list">
+      ${config.services.map(renderDropdownService).join("")}
+    </div>
+  </div>
+</div>
             </div>
           `;
                 }
@@ -210,18 +205,32 @@
 
         markActiveNavLinks();
     }
+  
+  function moveMobileMenuToBody() {
+    const menu = document.querySelector("[data-mobile-menu]");
 
-    function renderDropdownService(service) {
-        return `
-      <a class="services-dropdown__card" href="${escapeAttr(service.href)}" role="menuitem">
-        <span class="services-dropdown__icon" aria-hidden="true">${iconSvg(service.icon)}</span>
-        <span>
-          <strong>${escapeHtml(service.title)}</strong>
-          <em>${escapeHtml(service.summary)}</em>
+    if (!menu) return;
+
+    document.body.appendChild(menu);
+  }
+
+  function renderDropdownService(service) {
+    return `
+      <a class="services-dropdown__link" href="${escapeAttr(service.href)}" role="menuitem">
+        <span class="services-dropdown__link-icon" aria-hidden="true">
+          ${iconSvg(service.icon)}
+        </span>
+
+        <span class="services-dropdown__link-text">
+          ${escapeHtml(service.title)}
+        </span>
+
+        <span class="services-dropdown__link-arrow" aria-hidden="true">
+          ${iconSvg("arrow-right")}
         </span>
       </a>
     `;
-    }
+  }
 
     function renderMobileMenu() {
         const mainLinks = config.navigation
