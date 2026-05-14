@@ -5,6 +5,7 @@
    Handles:
    - calm hero slideshow
    - hero pagination
+   - config-driven slides
    - prefers-reduced-motion safety
    ========================================================== */
 
@@ -19,8 +20,8 @@
     document.addEventListener("DOMContentLoaded", initHomePage);
 
     function initHomePage() {
-        initHomeHeroSlideshow();
         enhanceHomeHeroFromConfig();
+        initHomeHeroSlideshow();
     }
 
     /* ========================================================
@@ -28,33 +29,38 @@
        ======================================================== */
 
     function enhanceHomeHeroFromConfig() {
-        const hero = config.home && config.home.hero;
-        if (!hero) return;
-
         const slidesMount = document.querySelector("[data-home-hero-slides]");
         const paginationMount = document.querySelector("[data-home-hero-pagination]");
+        const slides = config.assets &&
+            config.assets.hero &&
+            Array.isArray(config.assets.hero.homeSlides)
+            ? config.assets.hero.homeSlides
+            : [];
 
-        if (slidesMount && Array.isArray(config.assets.hero.homeSlides)) {
-            slidesMount.innerHTML = config.assets.hero.homeSlides
-                .map((src, index) => {
-                    return `
-            <div class="home-hero__slide${index === 0 ? " is-active" : ""}">
-              <img src="${escapeAttr(src)}" alt="">
-            </div>
-          `;
-                })
-                .join("");
-        }
+        if (!slidesMount || !paginationMount || !slides.length) return;
 
-        if (paginationMount && Array.isArray(config.assets.hero.homeSlides)) {
-            paginationMount.innerHTML = config.assets.hero.homeSlides
-                .map((_, index) => {
-                    return `
-            <button class="${index === 0 ? "is-active" : ""}" type="button" aria-label="Show slide ${index + 1}"></button>
-          `;
-                })
-                .join("");
-        }
+        slidesMount.innerHTML = slides
+            .map((src, index) => {
+                return `
+                    <div class="home-hero__slide${index === 0 ? " is-active" : ""}">
+                        <img src="${escapeAttr(src)}" alt="">
+                    </div>
+                `;
+            })
+            .join("");
+
+        paginationMount.innerHTML = slides
+            .map((_, index) => {
+                return `
+                    <button
+                        class="${index === 0 ? "is-active" : ""}"
+                        type="button"
+                        aria-label="Show slide ${index + 1}"
+                        ${index === 0 ? 'aria-current="true"' : 'aria-current="false"'}
+                    ></button>
+                `;
+            })
+            .join("");
     }
 
     /* ========================================================
@@ -68,7 +74,7 @@
         const slides = Array.from(hero.querySelectorAll(".home-hero__slide"));
         const pagination = Array.from(hero.querySelectorAll("[data-home-hero-pagination] button"));
 
-        if (!slides.length || !pagination.length) return;
+        if (!slides.length) return;
 
         let activeIndex = 0;
         let timer = null;
@@ -78,11 +84,15 @@
             activeIndex = normalizeIndex(index, slides.length);
 
             slides.forEach((slide, slideIndex) => {
-                slide.classList.toggle("is-active", slideIndex === activeIndex);
+                const isActive = slideIndex === activeIndex;
+
+                slide.classList.toggle("is-active", isActive);
+                slide.setAttribute("aria-hidden", isActive ? "false" : "true");
             });
 
             pagination.forEach((button, buttonIndex) => {
                 const isActive = buttonIndex === activeIndex;
+
                 button.classList.toggle("is-active", isActive);
                 button.setAttribute("aria-current", isActive ? "true" : "false");
             });
@@ -103,10 +113,10 @@
         }
 
         function stop() {
-            if (timer) {
-                window.clearInterval(timer);
-                timer = null;
-            }
+            if (!timer) return;
+
+            window.clearInterval(timer);
+            timer = null;
         }
 
         pagination.forEach((button, index) => {

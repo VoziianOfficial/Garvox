@@ -2883,3 +2883,134 @@ body.menu-open {
 .services-dropdown__inner--simple .services-dropdown__card {
     display: none;
 }
+
+/* ==========================================================
+   FIX — HOME HERO SLIDESHOW
+   ========================================================== */
+
+.home-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: clamp(620px, 100vh, 860px);
+    background: var(--color-bg-deep);
+}
+
+.home-hero__slides {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    overflow: hidden;
+}
+
+.home-hero__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.01);
+    transition:
+        opacity 900ms ease,
+        visibility 900ms ease,
+        transform 5200ms ease;
+}
+
+.home-hero__slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.home-hero__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Overlay must stay above slides but below content */
+
+.home-hero__overlay,
+.home-hero__rail {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.home-hero__overlay {
+    z-index: -2;
+    background:
+        linear-gradient(90deg, rgba(15, 17, 19, 0.92), rgba(37, 40, 43, 0.68) 54%, rgba(37, 40, 43, 0.28)),
+        linear-gradient(180deg, rgba(15, 17, 19, 0.18), rgba(15, 17, 19, 0.82));
+}
+
+.home-hero__rail {
+    z-index: -1;
+    opacity: 0.32;
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 88px 88px;
+    mask-image: linear-gradient(90deg, black, transparent 78%);
+}
+
+.home-hero__inner {
+    position: relative;
+    z-index: 2;
+}
+
+.home-hero__pagination {
+    position: absolute;
+    right: var(--site-gutter);
+    bottom: clamp(28px, 5vw, 52px);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.home-hero__pagination button {
+    width: 34px;
+    height: 3px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.34);
+    border: 0;
+    border-radius: 999px;
+    transition:
+        width var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.home-hero__pagination button.is-active {
+    width: 54px;
+    background: var(--color-accent);
+    box-shadow: var(--glow-red);
+}
+
+@media (max-width: 720px) {
+    .home-hero {
+        min-height: 720px;
+    }
+
+    .home-hero__pagination {
+        right: auto;
+        left: var(--site-gutter);
+        bottom: 24px;
+    }
+
+    .home-hero__pagination button {
+        width: 28px;
+    }
+
+    .home-hero__pagination button.is-active {
+        width: 44px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-hero__slide {
+        transition: none;
+        transform: none;
+    }
+}
