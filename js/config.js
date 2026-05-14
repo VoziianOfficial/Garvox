@@ -99,11 +99,11 @@ window.SITE_CONFIG = {
             },
 
             tabs: {
-                sectional: "./assets/images/tab-sectional.jpg",
-                rollUp: "./assets/images/tab-roll-up.jpg",
+                sectional: "./assets/images/home-hero-04.jpg",
+                rollUp: "./assets/images/service-installation.jpg",
                 carriage: "./assets/images/tab-carriage.jpg",
-                glass: "./assets/images/tab-glass.jpg",
-                insulated: "./assets/images/tab-insulated.jpg"
+                glass: "./assets/images/material-glass.jpg",
+                insulated: "./assets/images/material-steel.jpg"
             }
         }
     },
@@ -821,7 +821,7 @@ window.SITE_CONFIG = {
         {
             id: "sectional",
             label: "Sectional",
-            image: "./assets/images/tab-sectional.jpg",
+            image: "./assets/images/home-hero-04.jpg",
             title: "Sectional garage doors",
             text:
                 "Sectional doors are common in residential settings. Compare providers familiar with material, insulation, panel style, track condition, opener fit, and warranty questions.",
@@ -836,7 +836,7 @@ window.SITE_CONFIG = {
         {
             id: "roll-up",
             label: "Roll-Up",
-            image: "./assets/images/tab-roll-up.jpg",
+            image: "./assets/images/service-installation.jpg",
             title: "Roll-up garage doors",
             text:
                 "Roll-up door projects may require specific hardware, clearance, and provider familiarity. Ask providers about fit, material, operation, and maintenance considerations.",
@@ -866,7 +866,7 @@ window.SITE_CONFIG = {
         {
             id: "glass",
             label: "Glass Garage Doors",
-            image: "./assets/images/tab-glass.jpg",
+            image: "./assets/images/material-glass.jpg",
             title: "Glass garage doors",
             text:
                 "Glass garage door projects can involve frame finish, privacy, insulation, panel type, and maintenance questions. Compare providers before choosing a direction.",
@@ -881,7 +881,7 @@ window.SITE_CONFIG = {
         {
             id: "insulated",
             label: "Insulated Doors",
-            image: "./assets/images/tab-insulated.jpg",
+            image: "./assets/images/material-steel.jpg",
             title: "Insulated garage doors",
             text:
                 "Insulated door options are often compared for thermal performance, noise reduction, door weight, opener fit, and material durability.",
